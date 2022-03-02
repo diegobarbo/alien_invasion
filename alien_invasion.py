@@ -5,6 +5,7 @@ from ship import Ship
 
 import game_functions as gf
 
+
 def run_game():
     # inicializa o jogo e cria um objeto para a tela
     pygame.init()
@@ -23,7 +24,9 @@ def run_game():
 
     while True:
         # observa eventos de teclado e de mouse
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update()
         gf.update_screen(ai_settings, screen, ship)
+
 
 run_game()
